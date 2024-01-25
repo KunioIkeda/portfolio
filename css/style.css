@@ -157,6 +157,7 @@ main .works .slider li img {
     width: 1200px;
     height: auto;
     object-fit: contain;
+    filter: drop-shadow(10px 15px 10px rgba(0,0,0,0.4));
 }
 main .works .slider li .pc {
     display: block !important;
@@ -164,16 +165,12 @@ main .works .slider li .pc {
 main .works .slider li .sp {
     display: none !important;
 }
-main .works .btns {
-    text-align: center;
-}
-main .works .btns #prev,
-main .works .btns #next {
-    width: 40px;
-    height: 40px;
-    background-color: #333333;
-    border-radius: 50%;
-}
+/* main .works .btns {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    margin: 0 10px;
+} */
 main .contact {
     background-color: #efefef;
 }

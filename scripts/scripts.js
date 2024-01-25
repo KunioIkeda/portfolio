@@ -13,7 +13,7 @@
 //       $slider.stop().animate({
 //           marginLeft: parseInt($slider.css('margin-left'), 10) - li_width + 'px'
 //       }, function () {
-//           $slider.css('margin-left', '50px');
+//           $slider.css('margin-left', '30px');
 //           $slider.find('li:first').appendTo($slider);
 //       });
 //   }, 4000);
