@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>kunio's portfolio</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">top</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#works">works</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="top" id="top">
+                <p>kunio ikeda</p>
+                <h1><span>池田 国生</span></h1>
+                <address>
+                    <p class="add">〒302-xxxx<br>茨城県</p><br>
+                    <p class="tel"><a href="tel:000-0000-0000">000-0000-0000</a></p><br>
+                    <p class="mail"><a href="mailto:etude.no3.em.op10@gmail.com">etude.no3.em.op10@gmail.com</a></p>
+                </address>
+            </section>
+            <section class="about" id="about">
+                <h2>about</h2>
+                    <p>1982年5月、三鷹市出身。<br>独学で<span>html</span>と<span>css</span>を学びjavascriptと<span>php</span>も独学しようとするも限界を感じ、<br>2023年に職業訓練校にてwebプログラミングについて学ぶ。<br>
+                    当サイトのソースコードはこちらから<br><a href="https://github.com/KunioIkeda/portfolio">kunio's portfolio (github)</a></p>
+            </section>
+            <section class="works" id="works">
+                <h2>works</h2>
+                <ul class="slider" id="slider">
+                    <li><a href="webprograming1/index.html"><img class="pc" src="img/reform.jpg" alt="forpc"><img class="sp" src="img/reform2.jpg" alt="forsp"></a></li>
+                </ul>
+            </section>
+            <section class="contact" id="contact">
+                <h2>contact</h2>
+                <form>
+                    <p>name<input type="text" name="user_name"></p>
+                    <p>email<input type="email" name="user_mail"></p>
+                    <p>message<textarea name="message"></textarea></p>
+                    <p><input type="submit" value="Send"></p>
+                </form>
+            </section>
+            <a href="#" class="homeBtn"></a>
+        </main>
+        <footer>
+            <p><small>&copy;2024 kunio ikeda</small></p>
+        </footer>
+        <script src="scripts/jquery-3.7.1.min.js"></script>
+        
+        <script src="scripts/scripts.js"></script>
+    </body>
+</html>

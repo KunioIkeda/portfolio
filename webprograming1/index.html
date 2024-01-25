@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="common/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/style.css">
+        <title>Design House Renovations</title>
+        <meta property="og:image" content="webprograming1/index.html">
+    </head>
+    <body>
+        <header>
+            <h1><img src="images/logo.svg" alt="design house renovation"></h1>
+            <nav class="gMenu">   
+                <input class="menu-btn" type="checkbox" id="menu-btn">
+                <label class="menu-icon" for="menu-btn">
+                    <span class="navicon"></span>
+                </label>
+                <ul class="menu">
+                    <li><a href="#concept">コンセプト</a></li>
+                    <li><a href="#service ">サービス</a></li>
+                    <li><a href="#flow">施工の流れ</a></li>
+                    <li><a href="#qa">よくあるご質問</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <p><img src="images/hero2.jpg" alt="hero"></p>
+            <section id="concept">
+                <h2>concept</h2>
+                <p class="sub">コンセプト</p>
+                <h3>家族が笑顔になれる場所</h3>
+                <p>家族が集う、温かく居心地の良い空間づくりを目指して、幅広い年代の方に安心して過ごしていただける空間づくりや、お手入れのしやすい素材を使用したリフォームをご提案いたします。</p>
+            </section>
+            <section id="service">
+                <h2>service</h2>
+                <p class="sub">サービス</p>
+                    <ul>
+                        <li>
+                            <img src="images/list1img.jpg">
+                            <h4>浴室</h4>
+                            <p>ご家族が一緒に入れる広めの浴槽や手すり等、安全性に配慮しています。</p>
+                            <a href="#">more</a>
+                        </li>
+                        <li>
+                            <img src="images/list2img.jpg">
+                            <h4>リビング</h4>
+                            <p>照明や家具の配置等、くつろぎやすい空間づくりを大切にしています。</p>
+                            <a href="#">more</a>
+                        </li>
+                        <li>
+                            <img src="images/list3img.jpg">
+                            <h4>キッチン</h4>
+                            <p>機能性だけでなく、デザイン性にもこだわっております。</p>
+                            <a href="#">more</a>
+                        </li>
+                    </ul>
+            </section>
+            <section id="flow">
+                <h2>flow</h2>
+                <p class="sub">施工の流れ</p>
+                <ul>
+                    <li><p>ご相談</p></li>
+                    <div class="arrow1"></div>
+                    <li><p>現地調査</p></li>
+                    <div class="arrow2"></div>
+                    <li><p>お見積り</p></li>
+                    <div class="arrow3"></div>
+                    <li><p>ご契約</p></li>
+                    <div class="arrow4"></div>
+                    <li><p>施工</p></li>
+                    <div class="arrow5"></div>
+                    <li><p>お引渡し</p></li>
+                </ul>
+            </section>
+            <section id="qa">
+                <h2>q&a</h2>
+                <p class="sub">よくあるご質問</p>
+                <ol>
+                    <li class="black"><p>見積りは無料ですか？</p></li>
+                    <li class="red"><p>はい。お見積りは無料で承っております。ホームページよりお気軽にお問い合わせください。</p></li>
+                </ol>
+                <ol>    
+                    <li class="black"><p>普段通り生活をしながらのリフォーム工事は可能ですか？</p></li>
+                    <li class="red"><p>はい。もちろん可能です。工事中の個所は、何日間か使用できなくなる場合もございますのであらかじめご了承ください。大型リフォームの場合には、仮住まいもお勧めしております。</p></li>
+                </ol>
+            </section>
+            <section id="contact">
+                <h2>contact</h2>
+                <p class="sub">お問い合わせ</p>
+                <form action="" method="">
+                    <div class="type">
+                        <p>お問い合わせ種別<span>必須</span></p>
+                        <label><input type="radio" name="attend" value="資料請求"><span>資料請求</span></label>
+                        <label><input type="radio" name="attend" value="ご相談"><span>ご相談</span></label>
+                    </div>
+                        <label><p>お名前<span>必須</span></p><input type="text" name="user_name"></label>
+                        <label><p>フリガナ<span>必須</span></p><input type="text" name="user_name"></label>
+                        <label><p>電話番号<span>必須</span></p><input type="tel" name="phon_namber"></label>
+                        <label class="add"><p>住所<span>必須</span></p><span>〒</span><input type="text" name="user_address"></label>
+                        <label class="add2"><p></p><input type="text" name="user_address"></label>
+                        <label><p>メールアドレス<span>必須</span></p><input type="email" name="user_mail"></label>
+                        <label><p>メールアドレス(確認用)<span>必須</span></p><input type="email" name="user_mail"></label>
+                        <label><p class="inq">お問い合わせ内容</p><textarea name="message"></textarea></label>
+                    <div class="btn">
+                        <input type="submit" value="入力内容を確認する">
+                    </div>
+                </form>
+            </section>
+            <a href="#" class="home"></a>
+        </main>
+        <footer>
+            <p>&copy;2023 design house renovations</p>
+        </footer>
+    </body>
+</html>
