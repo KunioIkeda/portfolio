@@ -1,20 +1,53 @@
 'use strict';
 
-// $(document).ready(function () {
-//   let $slider = $('#slider');
-//   let $lis    = $('#slider li');
-
-//   let li_count = $lis.length;
-//   let li_width = $lis.width() + parseInt($lis.css('margin-left'), 10) + parseInt($lis.css('margin-right'), 10);
-
-//   $slider.css('width', (li_width * li_count) + 'px');
-
-//   setInterval(function () {
-//       $slider.stop().animate({
-//           marginLeft: parseInt($slider.css('margin-left'), 10) - li_width + 'px'
-//       }, function () {
-//           $slider.css('margin-left', '30px');
-//           $slider.find('li:first').appendTo($slider);
-//       });
-//   }, 4000);
-// });
+const slider = document.getElementById('slider');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
+const indicator = document.getElementById('indicator');
+const lists = document.querySelectorAll('.list');
+const totalSlides = lists.length;
+let count = 0;
+let autoPlayInterval;
+function updateListBackground() {
+  for (let i = 0; i < lists.length; i++) {
+    lists[i].style.backgroundColor = i === count % totalSlides ? '#000' : '#fff';
+  }
+}
+function nextClick() {
+  slider.classList.remove(`slider${count % totalSlides + 1}`);
+  count++;
+  slider.classList.add(`slider${count % totalSlides + 1}`);
+  updateListBackground();
+}
+function prevClick() {
+  slider.classList.remove(`slider${count % totalSlides + 1}`);
+  count--;
+  if (count < 0) count = totalSlides - 1;
+  slider.classList.add(`slider${count % totalSlides + 1}`);
+  updateListBackground();
+}
+function startAutoPlay() {
+  autoPlayInterval = setInterval(nextClick, 3000);
+}
+function resetAutoPlayInterval() {
+  clearInterval(autoPlayInterval);
+  startAutoPlay();
+}
+next.addEventListener('click', () => {
+  nextClick();
+  resetAutoPlayInterval();
+});
+prev.addEventListener('click', () => {
+  prevClick();
+  resetAutoPlayInterval();
+});
+indicator.addEventListener('click', (event) => {
+  if (event.target.classList.contains('list')) {
+    const index = Array.from(lists).indexOf(event.target);
+    slider.classList.remove(`slider${count % totalSlides + 1}`);
+    count = index;
+    slider.classList.add(`slider${count % totalSlides + 1}`);
+    updateListBackground();
+    resetAutoPlayInterval();
+  }
+});

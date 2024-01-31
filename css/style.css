@@ -90,20 +90,20 @@ main .top address p {
 main .top address .add::before {
     content: url(../img/home.png);
     position: absolute;
-    top: 22px;
-    left: 45px;
+    top: 18%;
+    left: 2.5%;
 }
 main .top address .tel::before {
     content: url(../img/phon.png);
     position: absolute;
-    top: 64px;
-    left: 45px;
+    top: 50%;
+    left: 2.5%;
 }
 main .top address .mail::before {
     content: url(../img/mail.png);
     position: absolute;
-    top: 109px;
-    left: 45px;
+    top: 86%;
+    left: 2.5%;
 }
 main section {
     width: 100%;
@@ -121,7 +121,7 @@ main .about {
     background-color: #f9f9f9;
 }
 main .about p {
-    margin: 0 200px;
+    margin: 0 100px;
     text-align: center;
     font-size: 20px;
     line-height: 4em;
@@ -139,22 +139,24 @@ main .works {
     overflow: hidden;
 }
 main .works .slider {
+    width: 300%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 50px;
     height: 450px;
-    overflow: hidden;
+    transition: all 0.5s;
 }
 main .works .slider li {
-    display: inline-block;
-    flex-shrink: 0;
-    width: 1200px;
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 33.33%;
+    height: 100%;
     margin: 20px;
 }
 main .works .slider li img {
-    width: 1200px;
+    width: 1000px;
     height: auto;
     object-fit: contain;
     filter: drop-shadow(10px 15px 10px rgba(0,0,0,0.4));
@@ -165,12 +167,56 @@ main .works .slider li .pc {
 main .works .slider li .sp {
     display: none !important;
 }
-/* main .works .btns {
+.slider1 {
+    transform: translateX(0);
+}
+.slider2 {
+    transform: translateX(-33.33%);
+}
+.slider3 {
+    transform: translateX(-66.66%);
+}
+main .works .prev,
+main .works .next {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 2250px;
+    z-index: 10;
+    cursor: pointer;
+    border-top: solid 3px #000;
+    border-right: solid 3px #000;
+}
+main .works .prev {
+    left: 150px;
+    transform: rotate(-135deg) translateY(-50%);
+}
+main .works .next {
+    right: 130px;
+    transform: rotate(45deg) translateY(50%);
+}
+main .works .indicator {
+    position: absolute;
+    width: 100%;
+    top: 2600px;
     display: flex;
-    justify-content: space-between;
-    font-size: 30px;
-    margin: 0 10px;
-} */
+    justify-content: center;
+    align-items: center;
+    column-gap: 18px;
+    z-index: 10;
+}
+main .works .indicator li {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    list-style: none;
+    background-color: #fff;
+    border: 2px #000 solid;
+    cursor: pointer;
+}
+main .works .indicator li:first-of-type {
+    background-color: #000;
+}
 main .contact {
     background-color: #efefef;
 }
@@ -249,22 +295,46 @@ footer {
         top: 350px;
     }
     main .top address .add::before {
-        top: 19px;
-        left: 45px;
+        top: 18%;
+        left: 3.5%;
     }
     main .top address .tel::before {
-        top: 58px;
-        left: 45px;
+        top: 50%;
+        left: 3.5%;
     }
     main .top address .mail::before {
-        top: 98px;
-        left: 45px;
+        top: 86%;
+        left: 3.5%;
     }
     main section {
         height: 650px;
     }
     main section h2 {
         margin-bottom: 10px;
+    }
+    main .works .slider li img {
+        width: 700px;
+    }
+    main .works .prev,
+    main .works .next {
+        width: 15px;
+        height: 15px;
+        top: 1650px;
+    }
+    main .works .prev {
+        left: 25px;
+        transform: rotate(-135deg) translateY(-50%);
+      }
+    main .works .next {
+        right: 15px;
+        transform: rotate(45deg) translateY(50%);
+    }
+    main .works .indicator {
+        top: 1900px;
+    }
+    main .works .indicator li {
+        width: 14px;
+        height: 14px;
     }
     textarea {
         margin-bottom: 20px;
@@ -277,6 +347,12 @@ footer {
     header nav ul {
         display: block;
         text-align: right;
+    }
+    header nav ul li:nth-child(1) {
+        display: none;
+    }
+    main .top h1 {
+        padding-left: 10px;
     }
     main .top h1,
     main .top > p {
@@ -296,7 +372,7 @@ footer {
             width: 0;
         }
         100% {
-            width: 150px;
+            width: 130px;
         }
     }
     main .top address {
@@ -308,16 +384,16 @@ footer {
         line-height: 1.2;
     }
     main .top address .add::before {
-        top: 34px;
-        left: 10px;
+        top: 27%;
+        left: 2%;
     }
     main .top address .tel::before {
-        top: 74px;
-        left: 10px;
+        top: 57%;
+        left: 2%;
     }
     main .top address .mail::before {
-        top: 114px;
-        left: 10px;
+        top: 88%;
+        left: 2%;
     }
     main .about p {
         text-align: left;
@@ -330,8 +406,6 @@ footer {
     }
     main .works .slider li {
         object-fit: none;
-        width: 280px;
-        height: auto;
     }
     main .works .slider li .pc {
         display: none !important;
@@ -340,6 +414,19 @@ footer {
         display: block !important;
         width: 280px;
         height: auto;
+    }
+    main .works .prev,
+    main .works .next {
+        width: 10px;
+        height: 10px;
+        top: 1650px;
+    }
+    main .works .indicator {
+        top: 1900px;
+    }
+    main .works .indicator li {
+        width: 10px;
+        height: 10px;
     }
     main .contact form {
         width: 300px;
