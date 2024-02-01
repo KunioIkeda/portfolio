@@ -139,7 +139,7 @@ main .works {
     overflow: hidden;
 }
 main .works .slider {
-    width: 300%;
+    width: calc(100% * 3);
     display: flex;
     justify-content: center;
     align-items: center;
