@@ -3,10 +3,12 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     width: 100%;
     font-family: 'Inter','BIZ UDGothic', sans-serif;
 }
+
 header nav {
     position: fixed;
     top: 0;
@@ -14,18 +16,22 @@ header nav {
     width: 100%;
     z-index: 100;
 }
+
 header nav ul {
     display: flex;
     justify-content: flex-end;
 }
+
 header nav ul li {
     padding: 20px 10px 20px 20px;
     font-size: 22px;
 }
+
 header nav ul li a{
     position: relative;
     text-transform: capitalize;
 }
+
 header nav ul li a::after {
     position: absolute;
     left: 0;
@@ -38,14 +44,17 @@ header nav ul li a::after {
     transform-origin: center top;
     transition-duration: 0.5s;
 }
+
 header nav ul li a:hover:after {
     transform: scale(1,1);
 }
+
 main .top {
     width: 100%;
     height: 930px;
     border-left: 50px solid #800000;
 }
+
 main .top > p {
     font-size: 36px;
     position: relative;
@@ -53,15 +62,18 @@ main .top > p {
     margin-left: 80px;
     text-transform: capitalize;
 }
+
 main .top h1 {
     position: relative;
     top: 600px;
     font-size: 100px;
     margin-bottom: 20px;
 }
+
 main .top h1 span {
     margin-left: 70px;
 }
+
 main .top h1::after {
     content: "";
 	position: absolute;
@@ -78,37 +90,44 @@ main .top h1::after {
         width: 500px;
     }
 }
+
 main .top address {
     font-size: 18px;
     position: relative;
     top: 600px;
     padding-left: 75px;
 }
+
 main .top address p {
     line-height: 1.2;
 }
+
 main .top address .add::before {
     content: url(../img/home.png);
     position: absolute;
     top: 18%;
     left: 2.5%;
 }
+
 main .top address .tel::before {
     content: url(../img/phon.png);
     position: absolute;
     top: 50%;
     left: 2.5%;
 }
+
 main .top address .mail::before {
     content: url(../img/mail.png);
     position: absolute;
     top: 86%;
     left: 2.5%;
 }
+
 main section {
     width: 100%;
     height: 930px;
 }
+
 main section h2 {
     font-size: 40px;
     text-align: center;
@@ -117,9 +136,11 @@ main section h2 {
     margin-bottom: 60px;
     text-transform: capitalize;
 }
+
 main .about {
     background-color: #f9f9f9;
 }
+
 main .about p {
     margin: 0 100px;
     text-align: center;
@@ -127,17 +148,21 @@ main .about p {
     line-height: 4em;
     text-transform: capitalize;
 }
+
 main .about p span {
     text-transform: uppercase;
 }
+
 main .about p a {
     color: #0f2350;
     border-bottom: 1px #800000 solid;
 }
+
 main .works {
     background-color: #f4f4f4;
     overflow: hidden;
 }
+
 main .works .slider {
     width: calc(100% * 3);
     display: flex;
@@ -146,6 +171,7 @@ main .works .slider {
     height: 450px;
     transition: all 0.5s;
 }
+
 main .works .slider li {
     display: flex;
     justify-content: center;
@@ -155,27 +181,34 @@ main .works .slider li {
     height: 100%;
     margin: 20px;
 }
+
 main .works .slider li img {
     width: 1000px;
     height: auto;
     object-fit: contain;
     filter: drop-shadow(10px 15px 10px rgba(0,0,0,0.4));
 }
+
 main .works .slider li .pc {
     display: block !important;
 }
+
 main .works .slider li .sp {
     display: none !important;
 }
+
 .slider1 {
     transform: translateX(0);
 }
+
 .slider2 {
     transform: translateX(-33.33%);
 }
+
 .slider3 {
     transform: translateX(-66.66%);
 }
+
 main .works .prev,
 main .works .next {
     position: absolute;
@@ -187,14 +220,17 @@ main .works .next {
     border-top: solid 3px #000;
     border-right: solid 3px #000;
 }
+
 main .works .prev {
     left: 150px;
     transform: rotate(-135deg) translateY(-50%);
 }
+
 main .works .next {
     right: 130px;
     transform: rotate(45deg) translateY(50%);
 }
+
 main .works .indicator {
     position: absolute;
     width: 100%;
@@ -205,6 +241,7 @@ main .works .indicator {
     column-gap: 18px;
     z-index: 10;
 }
+
 main .works .indicator li {
     width: 22px;
     height: 22px;
@@ -214,22 +251,34 @@ main .works .indicator li {
     border: 2px #000 solid;
     cursor: pointer;
 }
+
 main .works .indicator li:first-of-type {
     background-color: #000;
 }
+
 main .contact {
     background-color: #efefef;
 }
+
 main .contact form {
     width: 400px;
     margin: 0 auto;
 }
+
 main .contact form p {
     text-align: center;
     line-height: 1.4;
     text-transform: capitalize;
     margin-bottom: 20px;
 }
+
+main .contact form p span {
+    font-size: 12px;
+    font-weight: 700;
+    color: #cc0000;
+    margin-left: 5px;
+}
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -240,18 +289,22 @@ textarea {
     padding: 4px 8px;
     text-align: left;
 }
+
 textarea {
     height: 200px;
     margin-bottom: 60px;
 }
+
 input[type="submit"] {
     background-color: #121212;
     color: #ffffff;
     padding: 18px 50px;
 }
+
 input[type="submit"]:hover {
     background-color: rgba(18, 18, 18,0.8);
 }
+
 .homeBtn {
     position: fixed;
     width: 60px;
@@ -263,7 +316,11 @@ input[type="submit"]:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(100px);
 }
+
 .homeBtn::before {
     content: "";
     height: 25px;
@@ -272,96 +329,148 @@ input[type="submit"]:hover {
     border-right: 2px solid #ffffff;
     transform: translateY(25%) rotate(-45deg);
 }
+
+.homeBtn.upMove{
+    animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.homeBtn.downMove{
+    animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+}
+
 footer {
     text-align: center;
     color: #ffffff;
     background-color: #800000;
     text-transform: capitalize;
 }
+
 @media screen and (max-width:1366px) {
     main .top {
         height: 650px;
     }
+
     main .top > p {
         font-size: 30px;
         top: 350px;
     }
+
     main .top h1 {
         top: 350px;
         font-size: 100px;
     }
+
     main .top address {
         font-size: 16px;
         top: 350px;
     }
+
     main .top address .add::before {
         top: 18%;
         left: 3.5%;
     }
+
     main .top address .tel::before {
         top: 50%;
         left: 3.5%;
     }
+
     main .top address .mail::before {
         top: 86%;
         left: 3.5%;
     }
+
     main section {
         height: 650px;
     }
+
     main section h2 {
         margin-bottom: 10px;
     }
+
     main .works .slider li img {
         width: 700px;
     }
+
     main .works .prev,
     main .works .next {
         width: 15px;
         height: 15px;
         top: 1650px;
     }
+
     main .works .prev {
         left: 25px;
         transform: rotate(-135deg) translateY(-50%);
-      }
+    }
+
     main .works .next {
         right: 15px;
         transform: rotate(45deg) translateY(50%);
     }
+
     main .works .indicator {
         top: 1900px;
     }
+
     main .works .indicator li {
         width: 14px;
         height: 14px;
     }
-    textarea {
+
+    main .contact form textarea {
         margin-bottom: 20px;
     }
 }
+
 @media screen and (max-width:768px) {
     header nav {
         position: absolute;
     }
+
     header nav ul {
         display: block;
         text-align: right;
     }
+
     header nav ul li:nth-child(1) {
         display: none;
     }
+
     main .top h1 {
         padding-left: 10px;
     }
+
     main .top h1,
     main .top > p {
         writing-mode: vertical-lr;
     }
+
     main .top > p {
         top: 150px;
         margin-left: 100px;
     }
+
     main .top h1 {
         font-size: 70px;
         top: 0;
@@ -375,70 +484,86 @@ footer {
             width: 130px;
         }
     }
+
     main .top address {
         font-size: 16px;
         top: 0;
         padding:15px 0 0 30px;
     }
+
     main .top address p {
         line-height: 1.2;
     }
+
     main .top address .add::before {
         top: 27%;
         left: 2%;
     }
+
     main .top address .tel::before {
         top: 57%;
         left: 2%;
     }
+
     main .top address .mail::before {
         top: 88%;
         left: 2%;
     }
+
     main .about p {
         text-align: left;
         margin: 0 50px;
         font-size: 16px;
         line-height: 3em;
     }
+
     main .works .slider {
         margin: 0;
     }
+
     main .works .slider li {
         object-fit: none;
     }
+
     main .works .slider li .pc {
         display: none !important;
     }
+
     main .works .slider li .sp {
         display: block !important;
         width: 280px;
         height: auto;
     }
+
     main .works .prev,
     main .works .next {
         width: 10px;
         height: 10px;
         top: 1650px;
     }
+
     main .works .indicator {
         top: 1900px;
     }
+
     main .works .indicator li {
         width: 10px;
         height: 10px;
     }
+
     main .contact form {
         width: 300px;
     }
+
     .homeBtn {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         right: 15px;
     }
+
     .homeBtn::before {
-        height: 15px;
-        width: 15px;
+        height: 20px;
+        width: 20px;
     }
 }
 /* *{

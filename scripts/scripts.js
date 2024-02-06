@@ -51,3 +51,26 @@ indicator.addEventListener('click', (event) => {
     resetAutoPlayInterval();
   }
 });
+
+// TOPへ戻るボタン
+function PageTopAnime() {
+  let scroll = $(window).scrollTop();
+  if (scroll >= 300) {
+    $('.homeBtn').removeClass('downMove');
+    $('.homeBtn').addClass('upMove');
+  } else {
+    if($('.homeBtn').hasClass('upMove')) {
+      $('.homeBtn').removeClass('upMove');
+      $('.homeBtn').addClass('downMove');
+    }
+  }
+}
+
+$(window).scroll(function () {
+  PageTopAnime();
+});
+
+$(window).on('load', function () {
+  PageTopAnime();
+});
+// TOPへ戻るボタンここまで
