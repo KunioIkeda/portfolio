@@ -9,6 +9,44 @@ body {
     font-family: 'Inter','BIZ UDGothic', sans-serif;
 }
 
+
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background:#333333;
+    text-align:center;
+}
+
+#loadingLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#loadingLogo img {
+    width: 1500px;
+}
+
+.fadeUp {
+    animation: fadeUpAnime 0.5s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 header nav {
     position: fixed;
     top: 0;
@@ -59,7 +97,7 @@ main .top > p {
     font-size: 36px;
     position: relative;
     top: 600px;
-    margin-left: 80px;
+    margin-left: 75px;
     text-transform: capitalize;
 }
 
@@ -80,7 +118,7 @@ main .top h1::after {
 	left: 0;
 	bottom: 0;
 	border-bottom: 5px solid #800000;
-	animation: nameAnime 2s linear forwards;
+	animation: nameAnime 2s linear forwards 3s;
 }
 @keyframes nameAnime {
     0% {
@@ -189,11 +227,11 @@ main .works .slider li img {
     filter: drop-shadow(10px 15px 10px rgba(0,0,0,0.4));
 }
 
-main .works .slider li .pc {
+.pc {
     display: block !important;
 }
 
-main .works .slider li .sp {
+.sp {
     display: none !important;
 }
 
@@ -305,7 +343,7 @@ input[type="submit"]:hover {
     background-color: rgba(18, 18, 18,0.8);
 }
 
-.homeBtn {
+.pageTop {
     position: fixed;
     width: 60px;
     height: 60px;
@@ -321,7 +359,7 @@ input[type="submit"]:hover {
     transform: translateY(100px);
 }
 
-.homeBtn::before {
+.pageTop::before {
     content: "";
     height: 25px;
     width: 25px;
@@ -330,7 +368,7 @@ input[type="submit"]:hover {
     transform: translateY(25%) rotate(-45deg);
 }
 
-.homeBtn.upMove{
+.pageTop.upMove{
     animation: UpAnime 0.5s forwards;
 }
 @keyframes UpAnime{
@@ -344,7 +382,7 @@ input[type="submit"]:hover {
     }
 }
 
-.homeBtn.downMove{
+.pageTop.downMove{
     animation: DownAnime 0.5s forwards;
 }
 @keyframes DownAnime{
@@ -444,6 +482,10 @@ footer {
 }
 
 @media screen and (max-width:768px) {
+    #loadingLogo img {
+        width: 300px;
+    }
+
     header nav {
         position: absolute;
     }
@@ -525,14 +567,17 @@ footer {
         object-fit: none;
     }
 
-    main .works .slider li .pc {
+    main .works .slider li .sp {
+        width: 280px;
+        height: auto;
+    }
+
+    .pc {
         display: none !important;
     }
 
-    main .works .slider li .sp {
+    .sp {
         display: block !important;
-        width: 280px;
-        height: auto;
     }
 
     main .works .prev,
@@ -555,13 +600,13 @@ footer {
         width: 300px;
     }
 
-    .homeBtn {
+    .pageTop {
         width: 50px;
         height: 50px;
         right: 15px;
     }
 
-    .homeBtn::before {
+    .pageTop::before {
         height: 20px;
         width: 20px;
     }
