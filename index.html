@@ -15,16 +15,12 @@
         <title>Kunio's Portfolio</title>
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">top</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#works">works</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div id="loading">
+            <div id="loadingLogo">
+              <img src="img/pcLoading.png" alt="" class="fadeUp pc"><img src="img/spLoading.png" alt="" class="fadeUp sp">
+            </div>
+        </div>
+        <header id="header"></header>
         <main>
             <section class="top" id="top">
                 <p>kunio ikeda</p>
@@ -43,9 +39,9 @@
             <section class="works" id="works">
                 <h2>works</h2>
                 <ul class="slider" id="slider">
-                    <li><a href="webProgramming1/index.html" target="_blank"><img class="pc" src="img/reform1.jpg" alt="forpc"><img class="sp" src="img/reform2.jpg" alt="forsp"></a></li>
-                    <li><a href="webProgramming1/index.html" target="_blank"><img class="pc" src="img/reform1.jpg" alt="forpc"><img class="sp" src="img/reform2.jpg" alt="forsp"></a></li>
-                    <li><a href="webProgramming1/index.html" target="_blank"><img class="pc" src="img/reform1.jpg" alt="forpc"><img class="sp" src="img/reform2.jpg" alt="forsp"></a></li>
+                    <li><a href="webProgramming1/index.html" target="_blank"><img src="img/reform1.jpg" alt="forpc" class="pc"><img src="img/reform2.jpg" alt="forsp" class="sp"></a></li>
+                    <li><a href="webProgramming1/index.html" target="_blank"><img src="img/reform1.jpg" alt="forpc" class="pc"><img src="img/reform2.jpg" alt="forsp" class="sp"></a></li>
+                    <li><a href="webProgramming1/index.html" target="_blank"><img src="img/reform1.jpg" alt="forpc" class="pc"><img src="img/reform2.jpg" alt="forsp" class="sp"></a></li>
                 </ul>
                 <button class="prev" id="prev"></button>
                 <button class="next" id="next"></button>
@@ -65,12 +61,10 @@
                 </form>
             </section>
         </main>
-        <a href="#" class="homeBtn"></a>
-        <footer>
-            <p><small>&copy;2024 kunio ikeda</small></p>
-        </footer>
+        <a href="#" class="pageTop"></a>
+        <footer id="footer"></footer>
         <script src="scripts/jquery-3.7.1.min.js"></script>
-        
         <script src="scripts/scripts.js"></script>
+        <script src="common/common.js"></script>
     </body>
 </html>
