@@ -33,7 +33,7 @@ function prevClick() {
   slider.classList.add(`slider${count % allLists + 1}`);
   updateListBackground();
 }
-$(window).on('load', function startAutoPlay() {
+window.addEventListener('load', function startAutoPlay() {
   autoPlayInterval = setInterval(nextClick, 3000);
 });
 function resetAutoPlayInterval() {
