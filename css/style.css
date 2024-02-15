@@ -682,12 +682,12 @@ footer {
 
     /*.doneクラスがついたヘッダー*/
     #header.dnone {
-        opacity: 0;/*透過0にして非表示に*/
+        display: none;/*非表示に*/
     }
 
     /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
     #header.dnone.panelactive {
-        opacity: 1;/*不透明にして出現*/
+        display: block;/*出現*/
     }
 
     /*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
@@ -709,7 +709,7 @@ footer {
     #header.dnone.panelactive #navi{
         opacity: 1;/*不透明に*/
         z-index:20;/*最前面に*/
-        background:#eee;
+        background:#eeeeee;
     }
 
     #header.dnone.panelactive #navi ul{
