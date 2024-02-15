@@ -156,7 +156,7 @@ main .top address .tel::before {
 main .top address .mail::before {
     content: url(../img/mail.png);
     position: absolute;
-    top: 83%;
+    top: 85%;
     left: 2.5%;
 }
 
@@ -547,7 +547,7 @@ footer {
     }
 
     main .top address .mail::before {
-        top: 88%;
+        top: 87%;
         left: 2%;
     }
 
