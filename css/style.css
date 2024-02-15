@@ -29,11 +29,10 @@ body {
     width: 1500px;
 }
 
-.load {
+#loading #loadingLogo .load {
     animation: loadAnime 0.5s forwards;
     opacity: 0;
 }
-
 @keyframes loadAnime{
     from {
         opacity: 0;
@@ -714,6 +713,10 @@ footer {
 
     #header.dnone.panelactive nav ul {
         text-align: center;
+    }
+    
+    #header.dnone.panelactive nav ul li {
+        display: block;
     }
 }
 /* *{
