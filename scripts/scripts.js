@@ -88,10 +88,10 @@ $(window).on('load', function () {
 function FixedAnime() {
   let scroll = $(window).scrollTop();
   if (scroll >= 300) {//300以上スクロールしたら
-      $('.openbtn1').addClass('fadeDown');//.openbtnにfadeDownというクラス名を付与して
+      $('.burger').addClass('fadeDown');//.openbtnにfadeDownというクラス名を付与して
       $('#header').addClass('dnone');//#headerにdnoneというクラス名を付与
     } else {//それ以外は
-      $('.openbtn1').removeClass('fadeDown');//fadeDownというクラス名を除き
+      $('.burger').removeClass('fadeDown');//fadeDownというクラス名を除き
       $('#header').removeClass('dnone');//dnoneというクラス名を除く
     }
 }
@@ -100,11 +100,11 @@ $(window).scroll(function () {
   FixedAnime();//スクロールをするとハンバーガーメニューに変化するための関数を呼ぶ
 });
 //ボタンをクリックした際のアニメーションの設定
-$('.openbtn1').click(function () {//ボタンがクリックされたら
+$('.burger').click(function () {//ボタンがクリックされたら
   $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
   $('#header').toggleClass('panelactive');//ヘッダーにpanelactiveクラスを付与
 });
 $(window).scroll(function () {//ナビゲーションのリンクがクリックされたら
-  $('.openbtn1').removeClass('active');//ボタンの activeクラスを除去し
+  $('.burger').removeClass('active');//ボタンの activeクラスを除去し
   $('#header').removeClass('panelactive');//ヘッダーのpanelactiveクラスも除去
 });
