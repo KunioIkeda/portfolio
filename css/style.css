@@ -706,7 +706,6 @@ footer {
 
     /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
     #header.dnone.panelactive nav {
-        opacity: 1;/*不透明に*/
         z-index:20;/*最前面に*/
         background:#eeeeee;
     }
