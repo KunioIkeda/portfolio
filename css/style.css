@@ -610,7 +610,7 @@ footer {
         width: 20px;
     }
 
-    .openbtn1{
+    .burger {
         display: none;
         position:fixed;
         top:20px;
@@ -622,7 +622,7 @@ footer {
         border-radius: 5px;
     }
 
-    .openbtn1 span{
+    .burger span {
         display: inline-block;
         transition: all .4s;
         position: absolute;
@@ -633,30 +633,30 @@ footer {
         width: 60%;
     }
 
-    .openbtn1 span:nth-of-type(1) {
+    .burger span:nth-of-type(1) {
         top:15px; 
     }
 
-    .openbtn1 span:nth-of-type(2) {
+    .burger span:nth-of-type(2) {
         top:25px;
     }
 
-    .openbtn1 span:nth-of-type(3) {
+    .burger span:nth-of-type(3) {
         top:35px;
     }
 
-    .openbtn1.active span:nth-of-type(1) {
+    .burger.active span:nth-of-type(1) {
         top: 18px;
         left: 18px;
         transform: translateY(6px) rotate(-45deg);
         width: 55%;
     }
 
-    .openbtn1.active span:nth-of-type(2) {
+    .burger.active span:nth-of-type(2) {
         opacity: 0;
     }
 
-    .openbtn1.active span:nth-of-type(3){
+    .burger.active span:nth-of-type(3) {
         top: 30px;
         left: 18px;
         transform: translateY(-6px) rotate(45deg);
@@ -668,7 +668,7 @@ footer {
         opacity: 0;
         display: block;
     }
-    @keyframes fadeDownAnime{
+    @keyframes fadeDownAnime {
         from {
             opacity: 0;
             transform: translateY(-100px);
@@ -691,7 +691,7 @@ footer {
     }
 
     /*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
-    #header.dnone #navi{
+    #header.dnone nav {
         /*固定位置にして最背面に*/
         position:fixed;
         /*高さと幅*/  
@@ -706,13 +706,13 @@ footer {
     }
 
     /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
-    #header.dnone.panelactive #navi{
+    #header.dnone.panelactive nav {
         opacity: 1;/*不透明に*/
         z-index:20;/*最前面に*/
         background:#eeeeee;
     }
 
-    #header.dnone.panelactive #navi ul{
+    #header.dnone.panelactive nav ul {
         text-align: center;
     }
 }
