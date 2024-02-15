@@ -7,6 +7,7 @@ $(window).on('load',function(){
 });
 // loadingの表示ここまで
 
+// スライダー
 const slider = document.getElementById('slider');
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
@@ -34,7 +35,7 @@ function prevClick() {
   updateListBackground();
 }
 window.addEventListener('load', function startAutoPlay() {
-  autoPlayInterval = setInterval(nextClick, 3000);
+  autoPlayInterval = setInterval(nextClick, 4000);
 });
 function resetAutoPlayInterval() {
   clearInterval(autoPlayInterval);
@@ -58,26 +59,52 @@ indicator.addEventListener('click', (event) => {
     resetAutoPlayInterval();
   }
 });
+// スライダーここまで
 
 // TOPへ戻るボタン
 function pageTop() {
   let scroll = $(window).scrollTop();
-  if (scroll >= 300) {
-    $('.pageTop').removeClass('downMove');
-    $('.pageTop').addClass('upMove');
+  if (scroll >= 300) {// 300以上スクロールしたら
+    $('.pageTop').removeClass('downMove');// #page-topについているDownMoveというクラス名を除く
+    $('.pageTop').addClass('upMove');// #page-topについているUpMoveというクラス名を付与
   } else {
-    if($('.pageTop').hasClass('upMove')) {
-      $('.pageTop').removeClass('upMove');
-      $('.pageTop').addClass('downMove');
+    if ($('.pageTop').hasClass('upMove')) {// すでに#page-topにUpMoveというクラス名がついていたら
+      $('.pageTop').removeClass('upMove');// UpMoveというクラス名を除き
+      $('.pageTop').addClass('downMove');// DownMoveというクラス名を#page-topに付与
     }
   }
 }
-
+// 画面をスクロールをしたら動かしたい場合の記述
 $(window).scroll(function () {
-  pageTop();
+  pageTop();// スクロールした際の動きの関数を呼ぶ
 });
-
+// ページが読み込まれたらすぐに動かしたい場合の記述
 $(window).on('load', function () {
-  pageTop();
+  pageTop();// スクロールした際の動きの関数を呼ぶ
 });
 // TOPへ戻るボタンここまで
+
+//スクロールをするとハンバーガーメニューに変化する設定
+function FixedAnime() {
+  let scroll = $(window).scrollTop();
+  if (scroll >= 300) {//300以上スクロールしたら
+      $('.openbtn1').addClass('fadeDown');//.openbtnにfadeDownというクラス名を付与して
+      $('#header').addClass('dnone');//#headerにdnoneというクラス名を付与
+    } else {//それ以外は
+      $('.openbtn1').removeClass('fadeDown');//fadeDownというクラス名を除き
+      $('#header').removeClass('dnone');//dnoneというクラス名を除く
+    }
+}
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+  FixedAnime();//スクロールをするとハンバーガーメニューに変化するための関数を呼ぶ
+});
+//ボタンをクリックした際のアニメーションの設定
+$('.openbtn1').click(function () {//ボタンがクリックされたら
+  $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+  $('#header').toggleClass('panelactive');//ヘッダーにpanelactiveクラスを付与
+});
+$(window).scroll(function () {//ナビゲーションのリンクがクリックされたら
+  $('.openbtn1').removeClass('active');//ボタンの activeクラスを除去し
+  $('#header').removeClass('panelactive');//ヘッダーのpanelactiveクラスも除去
+});
