@@ -45,6 +45,14 @@ body {
     }
 }
 
+.pc {
+    display: block !important;
+}
+
+.sp {
+    display: none !important;
+}
+
 header nav {
     position: fixed;
     top: 0;
@@ -223,14 +231,6 @@ main .works .slider li img {
     height: auto;
     object-fit: contain;
     filter: drop-shadow(10px 15px 10px rgba(0,0,0,0.4));
-}
-
-.pc {
-    display: block !important;
-}
-
-.sp {
-    display: none !important;
 }
 
 .slider1 {
@@ -714,7 +714,7 @@ footer {
     #header.dnone.panelactive nav ul {
         text-align: center;
     }
-    
+
     #header.dnone.panelactive nav ul li {
         display: block;
     }
