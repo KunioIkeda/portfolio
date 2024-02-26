@@ -2,8 +2,8 @@
 
 // loadingの表示
 $(window).on('load',function(){
-  $("#loading").delay(3000).fadeOut('slow');//ローディング画面を3秒（3000ms）待機してからフェードアウト
-  $("#loadingLogo").delay(2000).fadeOut('slow');//ロゴを2秒（2000ms）待機してからフェードアウト
+  $("#loading").delay(3000).fadeOut('slow');// ローディング画面を3秒（3000ms）待機してからフェードアウト
+  $("#loadingLogo").delay(2000).fadeOut('slow');// ロゴを2秒（2000ms）待機してからフェードアウト
 });
 // loadingの表示ここまで
 
@@ -84,27 +84,37 @@ $(window).on('load', function () {
 });
 // TOPへ戻るボタンここまで
 
-//スクロールをするとハンバーガーメニューに変化する設定
+// スクロールをするとハンバーガーメニューに変化
 function FixedAnime() {
   let scroll = $(window).scrollTop();
-  if (scroll >= 300) {//300以上スクロールしたら
-      $('.burger').addClass('fadeDown');//.openbtnにfadeDownというクラス名を付与して
-      $('#header').addClass('dnone');//#headerにdnoneというクラス名を付与
-    } else {//それ以外は
-      $('.burger').removeClass('fadeDown');//fadeDownというクラス名を除き
-      $('#header').removeClass('dnone');//dnoneというクラス名を除く
+  if (scroll >= 300) {// 300以上スクロールしたら
+      $('.burger').addClass('fadeDown');// .openbtnにfadeDownというクラス名を付与して
+      $('#header').addClass('dnone');// #headerにdnoneというクラス名を付与
+    } else {// それ以外は
+      $('.burger').removeClass('fadeDown');// fadeDownというクラス名を除き
+      $('#header').removeClass('dnone');// dnoneというクラス名を除く
     }
 }
-// 画面をスクロールをしたら動かしたい場合の記述
+// 画面をスクロールをしたら動く
 $(window).scroll(function () {
-  FixedAnime();//スクロールをするとハンバーガーメニューに変化するための関数を呼ぶ
+  FixedAnime();// スクロールをするとハンバーガーメニューが出る
 });
-//ボタンをクリックした際のアニメーションの設定
-$('.burger').click(function () {//ボタンがクリックされたら
-  $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
-  $('#header').toggleClass('panelactive');//ヘッダーにpanelactiveクラスを付与
+// ボタンをクリックした際のアニメーション
+$('.burger').click(function () {// ボタンがクリックされたら
+  $(this).toggleClass('active');// ボタン自身にactiveクラスを付与し
+  $('#header').toggleClass('panelactive');// ヘッダーにpanelactiveクラスを付与
 });
-$(window).scroll(function () {//ナビゲーションのリンクがクリックされたら
-  $('.burger').removeClass('active');//ボタンの activeクラスを除去し
-  $('#header').removeClass('panelactive');//ヘッダーのpanelactiveクラスも除去
+$(window).scroll(function () {// 画面がスクロールをしたら
+  $('.burger').removeClass('active');// ボタンのactiveクラスを除去し
+  $('#header').removeClass('panelactive');// ヘッダーのpanelactiveクラスも除去
+});
+// ハンバーガーメニューここまで
+
+$(function(){
+  $("ページ内リンクさせるボタン要素名").click(function(){
+    var target = $("アンカーリンク先のID名");
+    var position = $(target).offset().top;
+    $('html,body').animate({scrollTop: position}, 400);
+    return false;
+  });
 });
