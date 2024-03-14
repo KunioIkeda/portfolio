@@ -8,57 +8,59 @@ $(window).on('load',function(){
 // loadingの表示ここまで
 
 // スライダー
-const slider = document.getElementById('slider');
-const prev = document.getElementById('prev');
-const next = document.getElementById('next');
-const indicator = document.getElementById('indicator');
-const lists = document.querySelectorAll('.list');
-const allLists = lists.length;
-let count = 0;
-let autoPlayInterval;
-function updateListBackground() {
-  for (let i = 0; i < allLists; i++) {
-    lists[i].style.backgroundColor = i === count % allLists ? '#000' : '#fff';
+if (!window.location.href.includes('m')) {
+  const slider = document.getElementById('slider');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+  const indicator = document.getElementById('indicator');
+  const lists = document.querySelectorAll('.list');
+  const allLists = lists.length;
+  let count = 0;
+  let autoPlayInterval;
+  function updateListBackground() {
+    for (let i = 0; i < allLists; i++) {
+      lists[i].style.backgroundColor = i === count % allLists ? '#000' : '#fff';
+    }
   }
-}
-function nextClick() {
-  slider.classList.remove(`slider${count % allLists + 1}`);
-  count++;
-  slider.classList.add(`slider${count % allLists + 1}`);
-  updateListBackground();
-}
-function prevClick() {
-  slider.classList.remove(`slider${count % allLists + 1}`);
-  count--;
-  if (count < 0) count = allLists - 1;
-  slider.classList.add(`slider${count % allLists + 1}`);
-  updateListBackground();
-}
-window.addEventListener('load', function startAutoPlay() {
-  autoPlayInterval = setInterval(nextClick, 4000);
-});
-function resetAutoPlayInterval() {
-  clearInterval(autoPlayInterval);
-  startAutoPlay();
-}
-next.addEventListener('click', () => {
-  nextClick();
-  resetAutoPlayInterval();
-});
-prev.addEventListener('click', () => {
-  prevClick();
-  resetAutoPlayInterval();
-});
-indicator.addEventListener('click', (event) => {
-  if (event.target.classList.contains('list')) {
-    const index = Array.from(lists).indexOf(event.target);
+  function nextClick() {
     slider.classList.remove(`slider${count % allLists + 1}`);
-    count = index;
+    count++;
     slider.classList.add(`slider${count % allLists + 1}`);
     updateListBackground();
-    resetAutoPlayInterval();
   }
-});
+  function prevClick() {
+    slider.classList.remove(`slider${count % allLists + 1}`);
+    count--;
+    if (count < 0) count = allLists - 1;
+    slider.classList.add(`slider${count % allLists + 1}`);
+    updateListBackground();
+  }
+  window.addEventListener('load', function startAutoPlay() {
+    autoPlayInterval = setInterval(nextClick, 4000);
+  });
+  function resetAutoPlayInterval() {
+    clearInterval(autoPlayInterval);
+    startAutoPlay();
+  }
+  next.addEventListener('click', () => {
+    nextClick();
+    resetAutoPlayInterval();
+  });
+  prev.addEventListener('click', () => {
+    prevClick();
+    resetAutoPlayInterval();
+  });
+  indicator.addEventListener('click', (event) => {
+    if (event.target.classList.contains('list')) {
+      const index = Array.from(lists).indexOf(event.target);
+      slider.classList.remove(`slider${count % allLists + 1}`);
+      count = index;
+      slider.classList.add(`slider${count % allLists + 1}`);
+      updateListBackground();
+      resetAutoPlayInterval();
+    }
+  });
+}
 // スライダーここまで
 
 // TOPへ戻るボタン
@@ -87,7 +89,7 @@ $(window).on('load', function () {
 // スクロールをするとハンバーガーメニューに変化
 function FixedAnime() {
   let scroll = $(window).scrollTop();
-  if (scroll >= 300) {// 300以上スクロールしたら
+  if (scroll >= 300 || location.href.indexOf("m") !== -1) {// 300以上スクロールしたら
       $('.burger').addClass('fadeDown');// .openbtnにfadeDownというクラス名を付与して
       $('#header').addClass('dnone');// #headerにdnoneというクラス名を付与
     } else {// それ以外は
@@ -95,10 +97,16 @@ function FixedAnime() {
       $('#header').removeClass('dnone');// dnoneというクラス名を除く
     }
 }
+
 // 画面をスクロールをしたら動く
 $(window).scroll(function () {
   FixedAnime();// スクロールをするとハンバーガーメニューが出る
 });
+
+$(window).on('load', function () {
+  FixedAnime();//　ページを読み込むととハンバーガーメニューが出る
+});
+
 // ボタンをクリックした際のアニメーション
 $('.burger').click(function () {// ボタンがクリックされたら
   $(this).toggleClass('active');// ボタン自身にactiveクラスを付与し
@@ -109,12 +117,3 @@ $(window).scroll(function () {// 画面がスクロールをしたら
   $('#header').removeClass('panelactive');// ヘッダーのpanelactiveクラスも除去
 });
 // ハンバーガーメニューここまで
-
-$(function(){
-  $("ページ内リンクさせるボタン要素名").click(function(){
-    var target = $("アンカーリンク先のID名");
-    var position = $(target).offset().top;
-    $('html,body').animate({scrollTop: position}, 400);
-    return false;
-  });
-});
