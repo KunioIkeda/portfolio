@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']); 
 } else { 
-    header('Location: contact.php'); 
+    header('Location: contact.php');
 } 
 ?>
 

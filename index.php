@@ -12,7 +12,7 @@
     <address>
         <p class="add">〒302-xxxx<br>茨城県○○市△△0-0-0</p><br>
         <p class="tel"><a href="tel:000-0000-0000">000-0000-0000</a></p><br>
-        <p class="mail"><a href="mailto:etude.no3.em.op10@gmail.com">etude.no3.em.op10@gmail.com</a></p>
+        <p class="mail"><a href="mailto:etude_3_10_3@.yahoo.co.jp">etude_3_10_3@.yahoo.co.jp</a></p>
     </address>
 </section>
 
@@ -25,9 +25,9 @@
 <section class="works" id="works">
     <h2>works</h2>
     <ul class="slider" id="slider">
-        <li><a href="webProgramming1/index.html" target="_blank"><img src="images/reform1.jpg" alt="forpc" class="pc"><img src="images/reform2.jpg" alt="forsp" class="sp"><span>このサイトはダミーサイトです。</span></a></li>
-        <li><a href="webProgramming1/index.html" target="_blank"><img src="images/reform1.jpg" alt="forpc" class="pc"><img src="images/reform2.jpg" alt="forsp" class="sp"><span>このサイトはダミーサイトです。</span></a></li>
-        <li><a href="webProgramming1/index.html" target="_blank"><img src="images/reform1.jpg" alt="forpc" class="pc"><img src="images/reform2.jpg" alt="forsp" class="sp"><span>このサイトはダミーサイトです。</span></a></li>
+        <li><a href="webProgramming1/index.html" target="_blank"><img src="images/reform1.jpg" alt="forpc" class="pc"><img src="images/reform2.jpg" alt="forsp" class="sp"></a></li>
+        <li><a href="webProgramming2/index.html" target="_blank"><img src="images/taiwan1.jpg" alt="forpc" class="pc"><img src="images/taiwan2.jpg" alt="forsp" class="sp"></a></li>
+        <li><a href="webProgramming3/index.php" target="_blank"><img src="images/donuts1.jpg" alt="forpc" class="pc"><img src="images/donuts2.jpg" alt="forsp" class="sp"></a></li>
     </ul>
     <button class="prev" id="prev"></button>
     <button class="next" id="next"></button>
