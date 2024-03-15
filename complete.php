@@ -2,12 +2,12 @@
 
 <section class="complete">
     <h2>complete</h2>
-    <?php
+<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
-    $to = 'etude.no3.em.op10@gmail.com';
+    // $to = 'nocturne-no.20-c.m-op.posth@docomo.ne.jp';
     $subject = 'お問い合わせがありました';
     $body = "名前: $name\nメールアドレス: $email\n\n$message";
     if (mb_send_mail($to, $subject, $body)) {
