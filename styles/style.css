@@ -245,6 +245,7 @@ main .works .slider li a span {
     font-size: 20px;
     background-color: #ffffff;
     color: #cc0000;
+    padding: 3px;
 }
 
 main .works .slider li img {
