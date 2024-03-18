@@ -7,11 +7,13 @@ $(window).on('load',function(){
 });
 // loadingの表示
 
+// クリックすると表示が変わる
 const standard = document.getElementById('top');
 
 standard.addEventListener("click", () => {
   standard.classList.toggle("wahuu");
 });
+// クリックすると表示が変わる
 
 // スライダー
 if (!window.location.href.includes('m')) {
