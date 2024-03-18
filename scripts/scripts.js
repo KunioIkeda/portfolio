@@ -7,6 +7,12 @@ $(window).on('load',function(){
 });
 // loadingの表示
 
+const standard = document.getElementById('top');
+
+standard.addEventListener("click", () => {
+  standard.classList.toggle("wahuu");
+});
+
 // スライダー
 if (!window.location.href.includes('m')) {
   const slider = document.getElementById('slider');
@@ -61,6 +67,7 @@ if (!window.location.href.includes('m')) {
 }
 // スライダー
 
+
 // TOPへ戻るボタン
 function pageTop() {
   let scroll = $(window).scrollTop();
@@ -83,6 +90,7 @@ $(window).on('load', function () {
   pageTop();// スクロールした際の動きの関数を呼ぶ
 });
 // TOPへ戻るボタン
+
 
 // スクロールをするとハンバーガーメニューに変化
 function FixedAnime() {
@@ -115,6 +123,7 @@ $(window).scroll(function () {// 画面がスクロールをしたら
   $('#header').removeClass('panelactive');// ヘッダーのpanelactiveクラスも除去
 });
 // スクロールをするとハンバーガーメニューに変化
+
 
 // ページ内リンクの戻る動作を無効にする
 function jumpto( ID ){
