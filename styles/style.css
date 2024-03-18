@@ -172,7 +172,7 @@ main .top address .add::before {
 }
 
 main .top address .tel::before {
-    content: url(../images/phon.png);
+    content: url(../images/phone.png);
     position: absolute;
     top: 50%;
     left: 2.5%;
@@ -213,6 +213,7 @@ main .about p a {
 main .works {
     background-color: #f4f4f4;
     overflow: hidden;
+    position: relative;
 }
 
 main .works .slider {
@@ -220,7 +221,6 @@ main .works .slider {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 450px;
     transition: all 0.5s;
 }
 
@@ -238,7 +238,8 @@ main .works .slider li a {
     position: relative;
 }
 
-main .works .slider li a span {
+main .works .slider li a::after {
+    content: "※このサイトはダミーサイトです。";
     position: absolute;
     bottom: 0;
     right: 0;
@@ -272,7 +273,7 @@ main .works .next {
     position: absolute;
     width: 30px;
     height: 30px;
-    top: 2250px;
+    top: 450px;
     z-index: 10;
     cursor: pointer;
     border-top: solid 3px #000;
@@ -292,7 +293,7 @@ main .works .next {
 main .works .indicator {
     position: absolute;
     width: 100%;
-    top: 2600px;
+    top: 850px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -528,7 +529,7 @@ footer {
     }
 
     main section h2 {
-        margin-bottom: 10px;
+        margin-bottom: 0;
     }
     /* 共通ここまで */
 
@@ -573,7 +574,7 @@ footer {
     main .works .next {
         width: 15px;
         height: 15px;
-        top: 1650px;
+        top: 350px;
     }
 
     main .works .prev {
@@ -587,7 +588,7 @@ footer {
     }
 
     main .works .indicator {
-        top: 1900px;
+        top: 600px;
     }
 
     main .works .indicator li {
@@ -604,316 +605,316 @@ footer {
     /* indexここまで */
 }
 
-@media screen and (max-width:768px) {
-    #loadingLogo img {
-        width: 300px;
-    }
-
-    /* headerここから */
-    header nav {
-        position: absolute;
-    }
-    
-    header nav ul {
-        display: block;
-        text-align: right;
-    }
-
-    header nav ul li:nth-child(1) {
-        display: none;
-    }
-    /* headerここまで */
-
-    /* indexここから */
-    /* topここから */
-    main .top h1,
-    main .top > p {
-        writing-mode: vertical-lr;
-    }
-
-    main .top > p {
-        top: 150px;
-        margin-left: 100px;
-    }
-
-    main .top h1 {
-        font-size: 70px;
-        top: 0;
-        padding: 0 0 10px 10px;
-    }
-
-    main .top h1::after {
-        animation-duration: 1s;
-    }
-    @keyframes nameAnime {
-        0% {
-            width: 0;
+    @media screen and (max-width:768px) {
+        #loadingLogo img {
+            width: 300px;
         }
-        100% {
-            width: 130px;
+
+        /* headerここから */
+        header nav {
+            position: absolute;
         }
-    }
+        
+        header nav ul {
+            display: block;
+            text-align: right;
+        }
 
-    main .top address {
-        font-size: 16px;
-        top: 0;
-        padding:15px 0 0 30px;
-    }
+        header nav ul li:nth-child(1) {
+            display: none;
+        }
+        /* headerここまで */
 
-    main .top address p {
-        line-height: 1.2;
-    }
+        /* indexここから */
+        /* topここから */
+        main .top h1,
+        main .top > p {
+            writing-mode: vertical-lr;
+        }
 
-    main .top address .add::before {
-        top: 27%;
-        left: 2%;
-    }
+        main .top > p {
+            top: 150px;
+            margin-left: 100px;
+        }
 
-    main .top address .tel::before {
-        top: 56%;
-        left: 2%;
-    }
+        main .top h1 {
+            font-size: 70px;
+            top: 0;
+            padding: 0 0 10px 10px;
+        }
 
-    main .top address .mail::before {
-        top: 87%;
-        left: 2%;
-    }
-    /* topここまで */
+        main .top h1::after {
+            animation-duration: 1s;
+        }
+        @keyframes nameAnime {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 130px;
+            }
+        }
 
-    /* aboutここから */
-    main .about p {
-        text-align: left;
-        margin: 0 50px;
-        font-size: 16px;
-        line-height: 3em;
-    }
-    /* aboutここまで */
+        main .top address {
+            font-size: 16px;
+            top: 0;
+            padding:15px 0 0 30px;
+        }
 
-    /* worksここから */
-    main .works .slider {
-        margin: 0;
-    }
+        main .top address p {
+            line-height: 1.2;
+        }
 
-    main .works .slider li {
-        object-fit: none;
-    }
+        main .top address .add::before {
+            top: 27%;
+            left: 2%;
+        }
 
-    main .works .slider li .sp {
-        width: 280px;
-        height: auto;
-    }
+        main .top address .tel::before {
+            top: 56%;
+            left: 2%;
+        }
 
-    .pc {
-        display: none !important;
-    }
+        main .top address .mail::before {
+            top: 87%;
+            left: 2%;
+        }
+        /* topここまで */
 
-    .sp {
-        display: block !important;
-    }
+        /* aboutここから */
+        main .about p {
+            text-align: left;
+            margin: 0 50px;
+            font-size: 16px;
+            line-height: 3em;
+        }
+        /* aboutここまで */
 
-    main .works .slider li a span {
-        font-size: 10px;
-    }
+        /* worksここから */
+        main .works .slider {
+            margin: 0;
+        }
 
-    main .works .prev,
-    main .works .next {
-        width: 10px;
-        height: 10px;
-        top: 1650px;
-    }
+        main .works .slider li {
+            object-fit: none;
+        }
 
-    main .works .indicator {
-        top: 1900px;
-    }
+        main .works .slider li .sp {
+            width: 280px;
+            height: auto;
+        }
 
-    main .works .indicator li {
-        width: 10px;
-        height: 10px;
-    }
-    /* worksここまで */
+        .pc {
+            display: none !important;
+        }
 
-    /* contactここから */
-    main .contact form {
-        width: 300px;
-    }
-    /* contactここまで */
-    /* indexここまで */
+        .sp {
+            display: block !important;
+        }
 
-    /* confirmここから */
-    main .confirm h1 {
-        font-size: 20px;
-    }
-    
-    main .confirm p {
-        font-size: 14px;
-    }
+        main .works .slider li a::after {
+            font-size: 12px;
+        }
 
-    main .confirm table {
-        width: 300px;
-    }
+        main .works .prev,
+        main .works .next {
+            width: 10px;
+            height: 10px;
+            top: 350px;
+        }
 
-    main .confirm table tbody tr:nth-of-type(1),
-    main .confirm table tbody tr:nth-of-type(2) {
-        height: 25px;
-    }
-    
-    main .confirm table tbody tr:nth-of-type(3) {
-        height: 200px;
-    }
-    
-    main .confirm table tbody tr th {
-        width: 100px;
-        padding: 0 20px 0 25px;
-    }
-    
-    main .confirm table tbody tr td {
-        width: 150px;
-    }
-    
-    main .confirm form input[type="submit"] {
-        width: 80px;
-        height: 40px;
-        font-size: 14px;
-    }
-    
-    main .confirm form button {
-        width: 80px;
-        height: 40px;
-        font-size: 14px;
-    }
-    /* confirmここまで */
+        main .works .indicator {
+            top: 600px;
+        }
 
-    /* completeここから */
-    main .complete p {
-        width: 280px;
-        font-size: 18px;
-    }
-    /* completeここまで */
+        main .works .indicator li {
+            width: 10px;
+            height: 10px;
+        }
+        /* worksここまで */
 
-    /* pageTopボタンここから */
-    .pageTop {
-        width: 50px;
-        height: 50px;
-        right: 15px;
-    }
+        /* contactここから */
+        main .contact form {
+            width: 300px;
+        }
+        /* contactここまで */
+        /* indexここまで */
 
-    .pageTop::before {
-        height: 20px;
-        width: 20px;
-    }
-    /* pageTopボタンここまで */
+        /* confirmここから */
+        main .confirm h1 {
+            font-size: 20px;
+        }
+        
+        main .confirm p {
+            font-size: 14px;
+        }
 
-    /* バーガーナビここから */
-    .burger {
-        display: none;
-        position:fixed;
-        top:20px;
-        right: 20px;
-        z-index: 100;
-        cursor: pointer;
-        width: 50px;
-        height:50px;
-        border-radius: 5px;
-    }
+        main .confirm table {
+            width: 300px;
+        }
 
-    .burger span {
-        display: inline-block;
-        transition: all .4s;
-        position: absolute;
-        left: 14px;
-        height: 3px;
-        border-radius: 2px;
-        background-color: #800000;
-        width: 60%;
-    }
+        main .confirm table tbody tr:nth-of-type(1),
+        main .confirm table tbody tr:nth-of-type(2) {
+            height: 25px;
+        }
+        
+        main .confirm table tbody tr:nth-of-type(3) {
+            height: 200px;
+        }
+        
+        main .confirm table tbody tr th {
+            width: 100px;
+            padding: 0 20px 0 25px;
+        }
+        
+        main .confirm table tbody tr td {
+            width: 150px;
+        }
+        
+        main .confirm form input[type="submit"] {
+            width: 80px;
+            height: 40px;
+            font-size: 14px;
+        }
+        
+        main .confirm form button {
+            width: 80px;
+            height: 40px;
+            font-size: 14px;
+        }
+        /* confirmここまで */
 
-    .burger span:nth-of-type(1) {
-        top:15px; 
-    }
+        /* completeここから */
+        main .complete p {
+            width: 280px;
+            font-size: 18px;
+        }
+        /* completeここまで */
 
-    .burger span:nth-of-type(2) {
-        top:25px;
-    }
+        /* pageTopボタンここから */
+        .pageTop {
+            width: 50px;
+            height: 50px;
+            right: 15px;
+        }
 
-    .burger span:nth-of-type(3) {
-        top:35px;
-    }
+        .pageTop::before {
+            height: 20px;
+            width: 20px;
+        }
+        /* pageTopボタンここまで */
 
-    .burger.active span:nth-of-type(1) {
-        top: 18px;
-        left: 18px;
-        transform: translateY(6px) rotate(-45deg);
-        width: 55%;
-    }
+        /* バーガーナビここから */
+        .burger {
+            display: none;
+            position:fixed;
+            top:20px;
+            right: 20px;
+            z-index: 100;
+            cursor: pointer;
+            width: 50px;
+            height:50px;
+            border-radius: 5px;
+        }
 
-    .burger.active span:nth-of-type(2) {
-        opacity: 0;
-    }
+        .burger span {
+            display: inline-block;
+            transition: all .4s;
+            position: absolute;
+            left: 14px;
+            height: 3px;
+            border-radius: 2px;
+            background-color: #800000;
+            width: 60%;
+        }
 
-    .burger.active span:nth-of-type(3) {
-        top: 30px;
-        left: 18px;
-        transform: translateY(-6px) rotate(45deg);
-        width: 55%;
-    }
+        .burger span:nth-of-type(1) {
+            top:15px; 
+        }
 
-    .fadeDown {
-        animation: fadeDownAnime 0.5s forwards;
-        opacity: 0;
-        display: block;
-    }
-    @keyframes fadeDownAnime {
-        from {
+        .burger span:nth-of-type(2) {
+            top:25px;
+        }
+
+        .burger span:nth-of-type(3) {
+            top:35px;
+        }
+
+        .burger.active span:nth-of-type(1) {
+            top: 18px;
+            left: 18px;
+            transform: translateY(6px) rotate(-45deg);
+            width: 55%;
+        }
+
+        .burger.active span:nth-of-type(2) {
             opacity: 0;
-            transform: translateY(-100px);
         }
 
-        to {
-            opacity: 1;
-            transform: translateY(0);
+        .burger.active span:nth-of-type(3) {
+            top: 30px;
+            left: 18px;
+            transform: translateY(-6px) rotate(45deg);
+            width: 55%;
         }
-    }
 
-    /*.doneクラスがついたヘッダー*/
-    #header.dnone {
-        display: none;/*非表示に*/
-    }
+        .fadeDown {
+            animation: fadeDownAnime 0.5s forwards;
+            opacity: 0;
+            display: block;
+        }
+        @keyframes fadeDownAnime {
+            from {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
 
-    /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
-    #header.dnone.panelactive {
-        display: block;/*出現*/
-    }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    /*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
-    #header.dnone nav {
-        /*固定位置にして最背面に*/
-        position:fixed;
-        /*高さと幅*/  
-        width:100%;
-        height: 100vh;
-        /*天地中央＆テキスト中央揃え*/  
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        transition: all 0.4s;
-    }
+        /*.doneクラスがついたヘッダー*/
+        #header.dnone {
+            display: none;/*非表示に*/
+        }
 
-    /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
-    #header.dnone.panelactive nav {
-        z-index:20;/*最前面に*/
-        background:#eeeeee;
-    }
+        /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
+        #header.dnone.panelactive {
+            display: block;/*出現*/
+        }
 
-    #header.dnone.panelactive nav ul {
-        text-align: center;
-    }
+        /*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
+        #header.dnone nav {
+            /*固定位置にして最背面に*/
+            position:fixed;
+            /*高さと幅*/  
+            width:100%;
+            height: 100vh;
+            /*天地中央＆テキスト中央揃え*/  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: all 0.4s;
+        }
 
-    #header.dnone.panelactive nav ul li {
-        display: block;
+        /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
+        #header.dnone.panelactive nav {
+            z-index:20;/*最前面に*/
+            background:#eeeeee;
+        }
+
+        #header.dnone.panelactive nav ul {
+            text-align: center;
+        }
+
+        #header.dnone.panelactive nav ul li {
+            display: block;
+        }
+        /* バーガーナビここまで */
     }
-    /* バーガーナビここまで */
-}
 /* *{
     outline: 2px red solid;
 } */
