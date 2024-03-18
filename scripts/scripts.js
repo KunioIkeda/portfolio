@@ -5,7 +5,7 @@ $(window).on('load',function(){
   $("#loading").delay(3000).fadeOut('slow');// ローディング画面を3秒（3000ms）待機してからフェードアウト
   $("#loadingLogo").delay(2000).fadeOut('slow');// ロゴを2秒（2000ms）待機してからフェードアウト
 });
-// loadingの表示ここまで
+// loadingの表示
 
 // スライダー
 if (!window.location.href.includes('m')) {
@@ -59,7 +59,7 @@ if (!window.location.href.includes('m')) {
     }
   });
 }
-// スライダーここまで
+// スライダー
 
 // TOPへ戻るボタン
 function pageTop() {
@@ -82,7 +82,7 @@ $(window).scroll(function () {
 $(window).on('load', function () {
   pageTop();// スクロールした際の動きの関数を呼ぶ
 });
-// TOPへ戻るボタンここまで
+// TOPへ戻るボタン
 
 // スクロールをするとハンバーガーメニューに変化
 function FixedAnime() {
@@ -114,4 +114,11 @@ $(window).scroll(function () {// 画面がスクロールをしたら
   $('.burger').removeClass('active');// ボタンのactiveクラスを除去し
   $('#header').removeClass('panelactive');// ヘッダーのpanelactiveクラスも除去
 });
-// ハンバーガーメニューここまで
+// スクロールをするとハンバーガーメニューに変化
+
+// ページ内リンクの戻る動作を無効にする
+function jumpto( ID ){
+  const target = document.getElementById( ID );
+  if( target ) scrollBy( 0, target.getBoundingClientRect().top );
+  }
+// ページ内リンクの戻る動作を無効にする

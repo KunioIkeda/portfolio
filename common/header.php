@@ -18,10 +18,10 @@
         <header id="header">
             <nav>
                 <ul>
-                    <li><a href="index.php#top">top</a></li>
-                    <li><a href="index.php#about">about</a></li>
-                    <li><a href="index.php#works">works</a></li>
-                    <li><a href="index.php#contact">contact</a></li>
+                    <li><a href="javascript:void(0)" onclick="jumpto( 'top' )">top</a></li>
+                    <li><a href="javascript:void(0)" onclick="jumpto( 'about' )">about</a></li>
+                    <li><a href="javascript:void(0)" onclick="jumpto( 'works' )">works</a></li>
+                    <li><a href="javascript:void(0)" onclick="jumpto( 'contact' )">contact</a></li>
                 </ul>
             </nav>
         </header>

@@ -1,5 +1,5 @@
         </main>
-        <a href="#" class="pageTop"></a>
+        <a href="javascript:void(0)" onclick="jumpto( 'top' )" class="pageTop"></a>
         <footer id="footer">
             <p><small>&copy;2024 kunio ikeda</small></p>
         </footer>
