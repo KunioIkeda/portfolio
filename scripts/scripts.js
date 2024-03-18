@@ -44,11 +44,9 @@ if (!window.location.href.includes('m')) {
   }
   next.addEventListener('click', () => {
     nextClick();
-    resetAutoPlayInterval();
   });
   prev.addEventListener('click', () => {
     prevClick();
-    resetAutoPlayInterval();
   });
   indicator.addEventListener('click', (event) => {
     if (event.target.classList.contains('list')) {
