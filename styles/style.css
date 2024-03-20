@@ -618,7 +618,7 @@ footer {
         /* indexここから */
         /* 共通ここから */
         .wahuu .top {
-            background-position: 150% 110%;
+            background-position: 150% bottom;
         }
         /* 共通ここまで */
         /* indexここまで */
@@ -647,7 +647,7 @@ footer {
             /* indexここから */
             /* 共通ここから */
             .wahuu .top {
-                background-position: -35% 110%;
+                background-position: -35% bottom;
             }
 
             .wahuu .top h1,
