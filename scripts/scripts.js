@@ -8,10 +8,10 @@ $(window).on('load',function(){
 // loadingの表示
 
 // クリックすると表示が変わる
-const standard = document.getElementById('top');
+const wahuu = document.querySelector('h1');
 
-standard.addEventListener("click", () => {
-  standard.classList.toggle("wahuu");
+wahuu.addEventListener("click", () => {
+  document.body.classList.toggle("wahuu");
 });
 // クリックすると表示が変わる
 
