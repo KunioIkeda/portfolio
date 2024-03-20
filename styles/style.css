@@ -102,7 +102,7 @@ header nav ul li a:hover:after {
 }
 
 .wahuu .top {
-    background: url(../images/licorice.png) no-repeat bottom right;
+    background: url(../images/licorice.png) no-repeat right bottom;
 }
 
 main section {
@@ -614,322 +614,337 @@ footer {
     /* indexここまで */
 }
 
-    @media screen and (max-width:768px) {
-        #loadingLogo img {
-            width: 300px;
-        }
-
-        /* headerここから */
-        header nav {
-            position: absolute;
-        }
-        
-        header nav ul {
-            display: block;
-            text-align: right;
-        }
-
-        header nav ul li:nth-child(1) {
-            display: none;
-        }
-        /* headerここまで */
-
+    @media screen and (max-width:900px) {
         /* indexここから */
         /* 共通ここから */
         .wahuu .top {
-            background-position: -35% 110%;
+            background-position: 150% 110%;
         }
         /* 共通ここまで */
-
-        /* topここから */
-        main .top h1,
-        main .top > p {
-            writing-mode: vertical-lr;
-        }
-
-        main .top > p {
-            top: 150px;
-            margin-left: 100px;
-        }
-
-        main .top h1 {
-            font-size: 70px;
-            top: 0;
-            padding: 0 0 10px 10px;
-        }
-
-        main .top h1::after {
-            animation-duration: 1s;
-        }
-        @keyframes nameAnime {
-            0% {
-                width: 0;
-            }
-            100% {
-                width: 130px;
-            }
-        }
-
-        main .top address {
-            font-size: 16px;
-            top: 0;
-            padding:15px 0 0 30px;
-        }
-
-        main .top address p {
-            line-height: 1.2;
-        }
-
-        main .top address .add::before {
-            top: 27%;
-            left: 2%;
-        }
-
-        main .top address .tel::before {
-            top: 56%;
-            left: 2%;
-        }
-
-        main .top address .mail::before {
-            top: 87%;
-            left: 2%;
-        }
-        /* topここまで */
-
-        /* aboutここから */
-        main .about p {
-            text-align: left;
-            margin: 0 50px;
-            font-size: 16px;
-            line-height: 3em;
-        }
-        /* aboutここまで */
-
-        /* worksここから */
-        main .works .slider {
-            margin: 0;
-        }
-
-        main .works .slider li {
-            object-fit: none;
-        }
-
-        main .works .slider li .sp {
-            width: 280px;
-            height: auto;
-        }
-
-        .pc {
-            display: none !important;
-        }
-
-        .sp {
-            display: block !important;
-        }
-
-        main .works .slider li a::after {
-            font-size: 12px;
-        }
-
-        main .works .prev,
-        main .works .next {
-            width: 12px;
-            height: 12px;
-            top: 350px;
-        }
-
-        main .works .indicator {
-            top: 600px;
-        }
-
-        main .works .indicator li {
-            width: 10px;
-            height: 10px;
-        }
-        /* worksここまで */
-
-        /* contactここから */
-        main .contact form {
-            width: 300px;
-        }
-        /* contactここまで */
         /* indexここまで */
-
-        /* confirmここから */
-        main .confirm h1 {
-            font-size: 20px;
-        }
-        
-        main .confirm p {
-            font-size: 14px;
-        }
-
-        main .confirm table {
-            width: 300px;
-        }
-
-        main .confirm table tbody tr:nth-of-type(1),
-        main .confirm table tbody tr:nth-of-type(2) {
-            height: 25px;
-        }
-        
-        main .confirm table tbody tr:nth-of-type(3) {
-            height: 200px;
-        }
-        
-        main .confirm table tbody tr th {
-            width: 100px;
-            padding: 0 20px 0 25px;
-        }
-        
-        main .confirm table tbody tr td {
-            width: 150px;
-        }
-        
-        main .confirm form input[type="submit"] {
-            width: 80px;
-            height: 40px;
-            font-size: 14px;
-        }
-        
-        main .confirm form button {
-            width: 80px;
-            height: 40px;
-            font-size: 14px;
-        }
-        /* confirmここまで */
-
-        /* completeここから */
-        main .complete p {
-            width: 280px;
-            font-size: 18px;
-        }
-        /* completeここまで */
-
-        /* pageTopボタンここから */
-        .pageTop {
-            width: 50px;
-            height: 50px;
-            right: 15px;
-        }
-
-        .pageTop::before {
-            height: 20px;
-            width: 20px;
-        }
-        /* pageTopボタンここまで */
-
-        /* バーガーナビここから */
-        .burger {
-            display: none;
-            position:fixed;
-            top:20px;
-            right: 20px;
-            z-index: 100;
-            cursor: pointer;
-            width: 50px;
-            height:50px;
-            border-radius: 5px;
-        }
-
-        .burger span {
-            display: inline-block;
-            transition: all .4s;
-            position: absolute;
-            left: 14px;
-            height: 3px;
-            border-radius: 2px;
-            background-color: #800000;
-            width: 60%;
-        }
-
-        .burger span:nth-of-type(1) {
-            top:15px; 
-        }
-
-        .burger span:nth-of-type(2) {
-            top:25px;
-        }
-
-        .burger span:nth-of-type(3) {
-            top:35px;
-        }
-
-        .burger.active span:nth-of-type(1) {
-            top: 18px;
-            left: 18px;
-            transform: translateY(6px) rotate(-45deg);
-            width: 55%;
-        }
-
-        .burger.active span:nth-of-type(2) {
-            opacity: 0;
-        }
-
-        .burger.active span:nth-of-type(3) {
-            top: 30px;
-            left: 18px;
-            transform: translateY(-6px) rotate(45deg);
-            width: 55%;
-        }
-
-        .fadeDown {
-            animation: fadeDownAnime 0.5s forwards;
-            opacity: 0;
-            display: block;
-        }
-        @keyframes fadeDownAnime {
-            from {
-                opacity: 0;
-                transform: translateY(-100px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /*.doneクラスがついたヘッダー*/
-        #header.dnone {
-            display: none;/*非表示に*/
-        }
-
-        /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
-        #header.dnone.panelactive {
-            display: block;/*出現*/
-        }
-
-        /*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
-        #header.dnone nav {
-            /*固定位置にして最背面に*/
-            position:fixed;
-            /*高さと幅*/  
-            width:100%;
-            height: 100vh;
-            /*天地中央＆テキスト中央揃え*/  
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            transition: all 0.4s;
-        }
-
-        /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
-        #header.dnone.panelactive nav {
-            z-index:20;/*最前面に*/
-            background:#eeeeee;
-        }
-
-        #header.dnone.panelactive nav ul {
-            text-align: center;
-        }
-
-        #header.dnone.panelactive nav ul li {
-            display: block;
-        }
-        /* バーガーナビここまで */
     }
+
+        @media screen and (max-width:768px) {
+            #loadingLogo img {
+                width: 300px;
+            }
+
+            /* headerここから */
+            header nav {
+                position: absolute;
+            }
+            
+            header nav ul {
+                display: block;
+                text-align: right;
+            }
+
+            header nav ul li:nth-child(1) {
+                display: none;
+            }
+            /* headerここまで */
+
+            /* indexここから */
+            /* 共通ここから */
+            .wahuu .top {
+                background-position: -35% 110%;
+            }
+
+            .wahuu .top h1,
+            .wahuu .top address {
+                top: -20px;
+            }
+            /* 共通ここまで */
+
+            /* topここから */
+            main .top h1,
+            main .top > p {
+                writing-mode: vertical-lr;
+            }
+
+            main .top > p {
+                top: 150px;
+                margin-left: 100px;
+            }
+
+            main .top h1 {
+                font-size: 70px;
+                top: 0;
+                padding: 0 0 10px 10px;
+            }
+
+            main .top h1::after {
+                animation-duration: 1s;
+            }
+            @keyframes nameAnime {
+                0% {
+                    width: 0;
+                }
+                100% {
+                    width: 130px;
+                }
+            }
+
+            main .top address {
+                font-size: 16px;
+                top: 0;
+                padding:15px 0 0 30px;
+            }
+
+            main .top address p {
+                line-height: 1.2;
+            }
+
+            main .top address .add::before {
+                top: 27%;
+                left: 2%;
+            }
+
+            main .top address .tel::before {
+                top: 56%;
+                left: 2%;
+            }
+
+            main .top address .mail::before {
+                top: 87%;
+                left: 2%;
+            }
+            /* topここまで */
+
+            /* aboutここから */
+            main .about p {
+                text-align: left;
+                margin: 0 50px;
+                font-size: 16px;
+                line-height: 3em;
+            }
+            /* aboutここまで */
+
+            /* worksここから */
+            main .works .slider {
+                margin: 0;
+            }
+
+            main .works .slider li {
+                object-fit: none;
+            }
+
+            main .works .slider li .sp {
+                width: 280px;
+                height: auto;
+            }
+
+            .pc {
+                display: none !important;
+            }
+
+            .sp {
+                display: block !important;
+            }
+
+            main .works .slider li a::after {
+                font-size: 12px;
+            }
+
+            main .works .prev,
+            main .works .next {
+                width: 12px;
+                height: 12px;
+                top: 350px;
+            }
+
+            main .works .indicator {
+                top: 600px;
+            }
+
+            main .works .indicator li {
+                width: 10px;
+                height: 10px;
+            }
+            /* worksここまで */
+
+            /* contactここから */
+            main .contact form {
+                width: 300px;
+            }
+            /* contactここまで */
+            /* indexここまで */
+
+            /* confirmここから */
+            main .confirm h1 {
+                font-size: 20px;
+            }
+            
+            main .confirm p {
+                font-size: 14px;
+            }
+
+            main .confirm table {
+                width: 300px;
+            }
+
+            main .confirm table tbody tr:nth-of-type(1),
+            main .confirm table tbody tr:nth-of-type(2) {
+                height: 25px;
+            }
+            
+            main .confirm table tbody tr:nth-of-type(3) {
+                height: 200px;
+            }
+            
+            main .confirm table tbody tr th {
+                width: 100px;
+                padding: 0 20px 0 25px;
+            }
+            
+            main .confirm table tbody tr td {
+                width: 150px;
+            }
+            
+            main .confirm form input[type="submit"] {
+                width: 80px;
+                height: 40px;
+                font-size: 14px;
+            }
+            
+            main .confirm form button {
+                width: 80px;
+                height: 40px;
+                font-size: 14px;
+            }
+            /* confirmここまで */
+
+            /* completeここから */
+            main .complete p {
+                width: 280px;
+                font-size: 18px;
+            }
+            /* completeここまで */
+
+            /* pageTopボタンここから */
+            .pageTop {
+                width: 50px;
+                height: 50px;
+                right: 15px;
+            }
+
+            .pageTop::before {
+                height: 20px;
+                width: 20px;
+            }
+            /* pageTopボタンここまで */
+
+            /* バーガーナビここから */
+            .burger {
+                display: none;
+                position:fixed;
+                top:20px;
+                right: 20px;
+                z-index: 100;
+                cursor: pointer;
+                width: 50px;
+                height:50px;
+                border-radius: 5px;
+            }
+
+            .burger span {
+                display: inline-block;
+                transition: all .4s;
+                position: absolute;
+                left: 14px;
+                height: 3px;
+                border-radius: 2px;
+                background-color: #800000;
+                width: 60%;
+            }
+
+            .burger span:nth-of-type(1) {
+                top:15px; 
+            }
+
+            .burger span:nth-of-type(2) {
+                top:25px;
+            }
+
+            .burger span:nth-of-type(3) {
+                top:35px;
+            }
+
+            .burger.active span:nth-of-type(1) {
+                top: 18px;
+                left: 18px;
+                transform: translateY(6px) rotate(-45deg);
+                width: 55%;
+            }
+
+            .burger.active span:nth-of-type(2) {
+                opacity: 0;
+            }
+
+            .burger.active span:nth-of-type(3) {
+                top: 30px;
+                left: 18px;
+                transform: translateY(-6px) rotate(45deg);
+                width: 55%;
+            }
+
+            .fadeDown {
+                animation: fadeDownAnime 0.5s forwards;
+                opacity: 0;
+                display: block;
+            }
+            @keyframes fadeDownAnime {
+                from {
+                    opacity: 0;
+                    transform: translateY(-100px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /*.doneクラスがついたヘッダー*/
+            #header.dnone {
+                display: none;/*非表示に*/
+            }
+
+            /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
+            #header.dnone.panelactive {
+                display: block;/*出現*/
+            }
+
+            /*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
+            #header.dnone nav {
+                /*固定位置にして最背面に*/
+                position:fixed;
+                /*高さと幅*/  
+                width:100%;
+                height: 100vh;
+                /*天地中央＆テキスト中央揃え*/  
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                transition: all 0.4s;
+            }
+
+            /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
+            #header.dnone.panelactive nav {
+                z-index:20;/*最前面に*/
+                background:#eeeeee;
+            }
+
+            #header.dnone.panelactive nav ul {
+                text-align: center;
+            }
+
+            #header.dnone.panelactive nav ul li {
+                display: block;
+            }
+            /* バーガーナビここまで */
+        }
 /* *{
     outline: 2px red solid;
 } */
