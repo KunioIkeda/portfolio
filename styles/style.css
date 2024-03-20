@@ -97,6 +97,14 @@ header nav ul li a:hover:after {
 
 /* indexここから */
 /* 共通ここから */
+.wahuu {
+    font-family: "Yuji Syuku", serif;
+}
+
+.wahuu .top {
+    background: url(../images/licorice.png) no-repeat bottom right;
+}
+
 main section {
     width: 100%;
     height: 930px;
@@ -117,11 +125,6 @@ main .top {
     border-left: 50px solid #800000;
 }
 
-.wahuu {
-    background: url(../images/licorice.png) no-repeat bottom right;
-    font-family: "Yuji Syuku", serif;
-}
-
 main .top > p {
     font-size: 36px;
     position: relative;
@@ -131,6 +134,7 @@ main .top > p {
 }
 
 main .top h1 {
+    width: fit-content;
     position: relative;
     top: 600px;
     font-size: 100px;
@@ -631,14 +635,16 @@ footer {
         /* headerここまで */
 
         /* indexここから */
+        /* 共通ここから */
+        .wahuu .top {
+            background-position: -35% 110%;
+        }
+        /* 共通ここまで */
+
         /* topここから */
         main .top h1,
         main .top > p {
             writing-mode: vertical-lr;
-        }
-
-        .wahuu {
-            background-position: -35% 110%;
         }
 
         main .top > p {
