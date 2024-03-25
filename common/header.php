@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="common/reset.css">
         <link rel="stylesheet" href="styles/style.css">
-        <title>Kunio's Portfolio</title>
+        <title><?php echo $pageTitle; ?></title>
     </head>
     <body>
         <header id="header">
