@@ -30,13 +30,13 @@ if (!window.location.href.includes('m')) {
       lists[i].style.backgroundColor = i === count % allLists ? '#000' : '#fff';
     }
   }
-  function nextClick() {
+  function nextMove() {
     slider.classList.remove(`slider${count % allLists + 1}`);
     count++;
     slider.classList.add(`slider${count % allLists + 1}`);
     updateListBackground();
   }
-  function prevClick() {
+  function prevMove() {
     slider.classList.remove(`slider${count % allLists + 1}`);
     count--;
     if (count < 0) count = allLists - 1;
@@ -44,17 +44,17 @@ if (!window.location.href.includes('m')) {
     updateListBackground();
   }
   window.addEventListener('load', function startAutoPlay() {
-    autoPlayInterval = setInterval(nextClick, 4000);
+    autoPlayInterval = setInterval(nextMove, 4000);
   });
   function resetAutoPlayInterval() {
     clearInterval(autoPlayInterval);
     startAutoPlay();
   }
   next.addEventListener('click', () => {
-    nextClick();
+    nextMove();
   });
   prev.addEventListener('click', () => {
-    prevClick();
+    prevMove();
   });
   indicator.addEventListener('click', (event) => {
     if (event.target.classList.contains('list')) {
