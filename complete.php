@@ -1,3 +1,4 @@
+<?php $pageTitle = "Kunio's Portfolio｜Complete"; ?>
 <?php require 'common/header.php'; ?>
 
 <section class="complete">
@@ -7,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
-    $to = '※都合により表示しておりません※';
+    $to = 'nocturne-no.20-c.m-op.posth@docomo.ne.jp';
     $subject = 'お問い合わせがありました';
     $body = "名前: $name\nメールアドレス: $email\n\n$message";
     if (mb_send_mail($to, $subject, $body)) {

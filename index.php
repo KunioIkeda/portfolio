@@ -1,3 +1,4 @@
+<?php $pageTitle = "Kunio's Portfolio"; ?>
 <?php require 'common/header.php'; ?>
 
 <div id="loading">

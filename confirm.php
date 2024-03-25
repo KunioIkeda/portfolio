@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Location: contact.php');
 } 
 ?>
-
+<?php $pageTitle = "Kunio's Portfolio｜Confirm"; ?>
 <?php require 'common/header.php'; ?>
 
 <section class="confirm">
