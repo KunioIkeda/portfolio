@@ -614,7 +614,7 @@ footer {
     /* indexここまで */
 }
 
-    @media screen and (max-width:900px) {
+    @media screen and (max-width:960px) {
         /* indexここから */
         /* 共通ここから */
         .wahuu .top {
@@ -624,7 +624,7 @@ footer {
         /* indexここまで */
     }
 
-        @media screen and (max-width:768px) {
+        @media screen and (max-width:430px) {
             #loadingLogo img {
                 width: 300px;
             }
@@ -652,7 +652,7 @@ footer {
 
             .wahuu .top h1,
             .wahuu .top address {
-                top: -20px;
+                top: -21px;
             }
             /* 共通ここまで */
 
