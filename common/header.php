@@ -6,6 +6,9 @@
         <meta property="opg:title" content="Kunio's Portfolio">
         <meta property="opg:url" content="https://kn920.cloudfree.jp/portfolio">
         <meta property="opg:type" content="website">
+        <link rel="icon" href="images/favicon.ico">
+        <link rel="icon" type="image/png" href="images/android-chrome.png" sizes="192x192">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png" sizes="180x180">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
