@@ -19,7 +19,7 @@
 
 <section class="about" id="about">
     <h2>about</h2>
-        <p>1982年5月、三鷹市出身。<br>独学で<span>html</span>と<span>css</span>を学びjavascriptと<span>php</span>も独学で学ぶが限界を感じ、<br>2023年に職業訓練校にてwebプログラミングについて学ぶ。<br>
+        <p>1982年5月、三鷹市出身。<br>独学で<span>html</span>と<span>css</span>を学びjavascriptと<span>php</span>も独学で学ぶが限界を感じ、<br>2023年に職業訓練校にてwebプログラミングについて学ぶ。<br><br>
         当サイトのソースコードはこちらから<br><a class="link" href="https://github.com/KunioIkeda/portfolio" target="_blank">kunio's portfolio (github)</a></p>
 </section>
 
@@ -44,7 +44,7 @@
     <form method="post" action="confirm.php">
         <label>name<span>※</span><input type="text" name="name" required></label>
         <label>email<span>※</span><input type="email" name="email" required></label>
-        <label>message<span>※</span><textarea type="text" name="message" required></textarea ></label>
+        <label>message<span>※</span><textarea type="text" name="message" required></textarea></label>
         <label><input type="submit" value="send"></label>
     </form>
 </section>
