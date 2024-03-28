@@ -10,9 +10,11 @@ $(window).on('load',function(){
 // クリックすると表示が変わる
 const wahuu = document.querySelector('h1');
 
-wahuu.addEventListener("click", () => {
-  document.body.classList.toggle("wahuu");
-});
+if (!window.location.href.includes('m')) {
+  wahuu.addEventListener("click", () => {
+    document.body.classList.toggle("wahuu");
+  });
+}
 // クリックすると表示が変わる
 
 // スライダー
@@ -97,7 +99,7 @@ $(window).on('load', function () {
 // スクロールをするとハンバーガーメニューに変化
 function FixedAnime() {
   let scroll = $(window).scrollTop();
-  if (scroll >= 300 || location.href.indexOf("m") !== -1) {// 300以上スクロールしたら
+  if (scroll >= 300 || location.href.includes('m')) {// 300以上スクロールしたら
       $('.burger').addClass('fadeDown');// .openbtnにfadeDownというクラス名を付与して
       $('#header').addClass('dnone');// #headerにdnoneというクラス名を付与
     } else {// それ以外は
