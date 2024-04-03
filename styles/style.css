@@ -247,7 +247,7 @@ main .works .slider li a {
 }
 
 main .works .slider li a::after {
-    content: "※このサイトはダミーサイトです。";
+    content: "※7/15までの架空サイトです。";
     position: absolute;
     bottom: 0;
     right: 0;
