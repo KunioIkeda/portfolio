@@ -19,16 +19,16 @@
 
 <section class="about" id="about">
     <h2>about</h2>
-        <p>1982年5月、三鷹市出身。<br>独学で<span>html</span>と<span>css</span>を学びjavascriptと<span>php</span>も独学で学ぶが限界を感じ、<br>2023年に職業訓練校にてwebプログラミングについて学ぶ。<br><br>
+        <p>1982年5月、三鷹市出身。<br>独学で<span>html</span>と<span>css</span>を学びJavaScriptと<span>php</span>も独学で学ぶが限界を感じ、<br>2023年に職業訓練校にてwebプログラミングについて学ぶ。<br><br>
         当サイトのソースコードはこちらから<br><a class="link" href="https://github.com/KunioIkeda/portfolio" target="_blank">kunio's portfolio (github)</a></p>
 </section>
 
 <section class="works" id="works">
     <h2>works</h2>
     <ul class="slider" id="slider">
-        <li><a href="webProgramming1/index.html" target="_blank"><img src="images/reform1.jpg" alt="forpc" class="pc"><img src="images/reform2.jpg" alt="forsp" class="sp"></a></li>
-        <li><a href="webProgramming2/index.html" target="_blank"><img src="images/taiwan1.jpg" alt="forpc" class="pc"><img src="images/taiwan2.jpg" alt="forsp" class="sp"></a></li>
-        <li><a href="webProgramming3/index.php" target="_blank"><img src="images/donuts1.jpg" alt="forpc" class="pc"><img src="images/donuts2.jpg" alt="forsp" class="sp"></a></li>
+        <li><a href="webProgramming1/index.html" target="_blank"><img src="" alt="forpc" class="pc"><img src="" alt="forsp" class="sp"></a></li>
+        <li><a href="webProgramming2/index.html" target="_blank"><img src="" alt="forpc" class="pc"><img src="" alt="forsp" class="sp"></a></li>
+        <li><a href="webProgramming3/index.php" target="_blank"><img src="" alt="forpc" class="pc"><img src="" alt="forsp" class="sp"></a></li>
     </ul>
     <button class="prev" id="prev"></button>
     <button class="next" id="next"></button>
